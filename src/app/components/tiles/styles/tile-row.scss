@@ -1,0 +1,25 @@
+@import '../../../../styles/variables';
+
+.tile-row {
+    @include flex('even');
+
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
+}
+
+@include device('mobile') {
+    .tile-row {
+        @include flex('between', 1);
+        flex-direction: column;
+
+        width: 100%;
+    }
+}
+
+@include device('tablet') {
+    .tile-row {
+        @include flex('between', 1);
+        flex-wrap: wrap;
+    }
+}

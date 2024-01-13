@@ -1,0 +1,41 @@
+@import '../../../styles/variables';
+
+.banner {
+    @include flex('center', 1);
+
+    position: relative;
+    width: 100%;
+    user-select: none;
+    max-height: 512px;
+    overflow: hidden;
+    background-color: $clr1;
+
+    .banner-img {
+        width: 100%;
+        max-width: 1024px;
+    }
+
+    .heading-shadow,
+    .heading {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 0);
+
+        color: transparent;
+        white-space: nowrap;
+
+        font-size: 64px;
+        font-size: 6vw;
+    }
+
+    .heading-shadow {
+        text-shadow: 0px 1px 2px black;
+    }
+
+    .heading {
+        background-image: url('/images/rock_wall.jpg');
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+}

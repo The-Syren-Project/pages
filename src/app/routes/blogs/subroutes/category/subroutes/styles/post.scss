@@ -1,0 +1,34 @@
+@import '../../../../../../../styles/variables';
+
+.post {
+    @include flex('', 1);
+    flex-direction: column;
+    width: 100%;
+
+    .post-subroutes {
+        @include flex('even', 1);
+        flex-direction: column;
+        padding: 8px 16px;
+        background-color: $clr2;
+
+        .breadcrumbs {
+            @include flex('even', 1);
+
+            span {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    .post-body {
+        position: relative;
+        width: 100%;
+
+        .post-controls {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 5px 10px;
+        }
+    }
+}

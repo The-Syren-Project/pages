@@ -1,0 +1,14 @@
+@import '../../../../../../styles/variables';
+
+.category-container {
+    @include flex('even', 1);
+    flex-direction: column;
+
+    width: 100%;
+
+    .post-links-container {
+        @include flex('even', 1);
+
+        width: 100%;
+    }
+}

@@ -1,0 +1,41 @@
+@import '../../../../styles/variables';
+
+.nav {
+    @include flex('between', 1);
+    position: absolute;
+    padding: 0 10px;
+    width: calc(100% - 20px);
+
+    .brand {
+        padding: 10px;
+    }
+
+    .nav-list {
+        @include flex('between', 1);
+        list-style-type: none;
+
+        .nav-list-item {
+            @include flex('between', 1);
+            padding: 5px 8px;
+            border-radius: 10px;
+            border: 1px solid hsl(0, 0%, 50%);
+            background-color: hsla(0, 0%, 70%,0.5);
+
+            &:not(:first-child) {
+                margin-left: 10px;
+            }
+
+            a {
+                @include flex('between', 1);
+                text-transform: capitalize;
+                color: $clr1;
+                font-weight: 600;
+                text-decoration: underline;
+
+                .icon {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
