@@ -1,16 +1,24 @@
+import './app.scss'
 import { Link, Outlet } from 'react-router-dom';
-import './App.css'
+import { themes } from '@syren-dev-tech/confetti/themes';
+import { useEffect } from 'react';
+import { Page, PageBody, PageHeader } from '@syren-dev-tech/confects/containers';
 
 export default function App() {
-    return <main>
-        <div>
-            <Link to="/">Home</Link>
+
+    useEffect(() => { themes.init('dark', 'india') }, []);
+
+    return <Page>
+        <PageHeader>
+            <Link to="/">
+                <img src="/icon.png" alt="Icon" className="icon-png" />
+            </Link>
             <Link to="/lore">Lore</Link>
             <Link to="/socials">Socials</Link>
-        </div>
+        </PageHeader>
 
-        <div>
+        <PageBody>
             <Outlet />
-        </div>
-    </main>
+        </PageBody>
+    </Page>
 }

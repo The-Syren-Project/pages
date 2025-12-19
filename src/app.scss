@@ -1,0 +1,12 @@
+@use '~styling' as styling;
+@use '~themes' as themes;
+@use '@syren-dev-tech/confetti/main.scss';
+@use '@syren-dev-tech/confects/style.css';
+
+@include themes.themeify('india');
+
+.icon-png {
+    @include styling.rounded;
+    width: 64px;
+    height: 64px;
+}

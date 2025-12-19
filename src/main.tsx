@@ -6,8 +6,6 @@ import Home from './pages/Home';
 import Lore from './pages/Lore';
 import Socials from './pages/Socials';
 
-import './index.css';
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <HashRouter>

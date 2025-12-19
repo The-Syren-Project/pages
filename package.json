@@ -9,12 +9,18 @@
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "deploy": "gh-pages -d dist"
+        "deploy": "gh-pages -d dist",
+        "sanity": "yarn typecheck && yarn lint && yarn knip",
+        "typecheck": "tsc -p tsconfig.json --noEmit"
     },
     "dependencies": {
+        "@syren-dev-tech/concauses": "^0.1.0",
+        "@syren-dev-tech/confects": "^0.1.0",
+        "@syren-dev-tech/confetti": "^0.1.0",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
-        "react-router-dom": "^7.10.1"
+        "react-router-dom": "^7.10.1",
+        "sass": "^1.97.1"
     },
     "devDependencies": {
         "@eslint/js": "^9.39.1",
